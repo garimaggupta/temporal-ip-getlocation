@@ -9,6 +9,7 @@ dotenv.config({ path: resolve(__dirname, './.env'), override: true });
 let connectionObj = {}
 let namespace = 'default';
 
+//Add connection parameters if connecting to Temporal Cloud
 if (process.env.USE_CLOUD === 'Y') {
   connectionObj = {
     address: process.env.TEMPORAL_ADDRESS,
